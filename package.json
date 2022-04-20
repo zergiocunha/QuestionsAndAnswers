@@ -1,0 +1,23 @@
+{
+  "name": "perguntaserespostas",
+  "version": "1.0.0",
+  "description": "Uma plataforma de perguntas e respostas ao estilo Yahoo Respostas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zergiocunha/QuestionsAndAnswers.git"
+  },
+  "author": "Sergio Cunha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zergiocunha/QuestionsAndAnswers/issues"
+  },
+  "homepage": "https://github.com/zergiocunha/QuestionsAndAnswers#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
