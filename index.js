@@ -25,5 +25,4 @@ app.post("/salvarpergunta",(req, res) => {
     res.send("Formulário recebido! Titulo: " + titulo + " " + " Descricao: " + descricao);
 });
 app.listen(8080, ()=>{console.log("App rodando!");});
-//teste git
 // ------------------------------------------------------
