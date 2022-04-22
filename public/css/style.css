@@ -6,6 +6,8 @@ body{
     background-color: #484848;
 }
 
-#titulo{
+#style{
     background-color: #616161;
+    border-color: black;
+    animation-play-state: running;
 }
