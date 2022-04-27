@@ -2,29 +2,37 @@
 <body>
 <%- include ('partials/navbar.ejs') %>
 <div class="container">
-    <hr>
-    <h1 class="text-light"><%= pergunta.titulo %></h1>
-    <p class="text-light"><%= pergunta.descricao %></p>
-    <hr>
-    <form method="POST" action="/responder">
-        <h3>Responda</h3>
-        <label class="text-light">Resposta:</label>
-        <textarea placeholder="Digite sua resposta" id="style" class="form-control" name="corpo">Responda</textarea><br>
-        <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
-        <button type="submit" class="btn btn-success">Responder</button>
-    </form>
-    <hr>
-    <h3>Respostas</h3>
-    <hr>
-    <% respostas.forEach(resposta => { %>
-    <br>
-    <div class="card">
+    <div class="card" id="formulario-pergunta">
+        <div class="card-header">
+            <h1 id="styleLetters"><%= pergunta.titulo %></h1>
+            <p id="styleResposta"><%= pergunta.descricao %></p>
+        </div>
+        <hr id="styleBr">
+        <form method="POST" action="/responder">
+            <div class="card-body">
+                <h3 id="styleLetters">Responda:</h3>
+                <br>
+                <textarea placeholder="Digite sua resposta" id="style" class="form-control text-light" name="corpo"></textarea><br>
+                <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
+                <button type="submit" class="btn btn-success">Responder</button>
+            </div>
+        </form>
+        <hr id="styleBr">
         <div class="card-body">
-        <p><%= resposta.corpo %></p>
+        <h3 id="styleLetters">Respostas anteriores:</h3>
+        </div>
+            <div class="card-body">
+                <% respostas.forEach(resposta => { %>
+                <div class="card" id="style">
+                    <div class="card-body" id="style">
+                        <p id="styleResposta"><%= resposta.corpo %></p>
+                    </div>
+                </div>
+                <br>
+            <% }) %>
+            </div>
         </div>
     </div>
-    <br>
-    <% }) %>
-</div>
+    <hr>
 </body>
 <%- include ('partials/footer.ejs') %>
