@@ -6,8 +6,52 @@ body{
     background-color: #484848;
 }
 
+#style textarea.form-control::textarea-placeholder {
+    color: rgb(255, 255, 255);
+  }
+
+  .form-control::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+    color: gainsboro;
+  }
+
+  .form-control{
+    border-color: gainsboro;
+    border-width: 5px; 
+    border-radius: 20px;
+  }
+
+  .card { /* Chrome, Safari, Opera */
+    border-color: gainsboro;
+    border-width: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+  }
+
 #style{
     background-color: #616161;
-    border-color: black;
-    animation-play-state: running;
+    border-color: gainsboro;
+    border-radius: 20px;
+    font-size: 24px;
+    text-emphasis-color: white;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+#styleBr{
+    background-color: gainsboro;
+    border-width: 5px;
+}
+
+#styleLetters{
+    color: gainsboro;
+    font: bolder;
+}
+
+#styleResposta{
+    color: gainsboro;
+    font: bolder;
+    font-size: 24px;
+}
+
+#imagem{
+    filter: contrast(0%) brightness(200%);
 }

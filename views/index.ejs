@@ -2,22 +2,25 @@
 <body>
     <%- include ('partials/navbar.ejs') %>
     <div class="container">
-        <hr>
-        <h1 class="text-light">Perguntas</h1>
-        <hr>
-        <a href="/perguntar" class="btn btn-primary">Perguntar</a>
-        <hr>
-        <% perguntas.forEach(pergunta => { %>
-            <div class="card" id="formulario-pergunta">
-                <div class="card-body">
-                    <h3 class="text-light"><%= pergunta.titulo %></h3>
-                </div>
-                <div class="card-footer">
-                  <a href="/pergunta/<%= pergunta.id %>"><button class="btn btn-success">Responder</button></a>
-                </div>
+        <div class="card" id="formulario-pergunta">
+            <div class="card-body">
+                <h1 class="text-light">Perguntas</h1>
+                <br>
+                <a href="/perguntar" class="btn btn-primary">Perguntar</a>
+                <% perguntas.forEach(pergunta => { %>
+                    <div class="card" id="formulario-pergunta">
+                        <div class="card-body">
+                            <h3 class="text-light"><%= pergunta.titulo %></h3>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/pergunta/<%= pergunta.id %>"><button class="btn btn-success">Responder</button></a>
+                        </div>
+                    </div>
+                <% }) %>
+                <br>
             </div>
-        <% }) %>
-        <br>
+        </div>
+        <hr>
     </div>
 </body>
 <%- include ('partials/footer.ejs') %>
